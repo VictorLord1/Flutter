@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:testflutter1/screens/datos.dart';
 import 'package:testflutter1/screens/secondPage.dart';
 import 'package:testflutter1/screens/thirdPage.dart';
+import 'package:testflutter1/screens/TestStack.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -12,7 +13,8 @@ void main() {
         '/': (context) => const HomePage(),
         '/second': (context) => const SecondPage(),
         '/third': (context) => const ThirdPage(),
-        '/datos': (context) => const Datos()
+        '/datos': (context) => const Datos(),
+        '/Four': (context) => const TestStack()
       }
       //home: HomePage(),
       ));
@@ -76,6 +78,23 @@ class HomePage extends StatelessWidget {
                     builder: (context) => const ThirdPage(),
                   );
                   Navigator.pushNamed(context, '/third');
+                }),
+            const SizedBox(height: 10.0),
+            ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                        Color.fromARGB(255, 145, 52, 52)),
+                    padding: MaterialStateProperty.all(
+                        const EdgeInsets.symmetric(
+                            horizontal: 25, vertical: 15)),
+                    textStyle: MaterialStateProperty.all(
+                        const TextStyle(fontSize: 15))),
+                child: const Text('Cuarta pantalla'),
+                onPressed: () {
+                  final route = MaterialPageRoute(
+                    builder: (context) => const TestStack(),
+                  );
+                  Navigator.pushNamed(context, '/Four');
                 }),
             const SizedBox(height: 10.0),
             ElevatedButton(
