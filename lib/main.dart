@@ -3,6 +3,7 @@ import 'package:testflutter1/screens/datos.dart';
 import 'package:testflutter1/screens/secondPage.dart';
 import 'package:testflutter1/screens/thirdPage.dart';
 import 'package:testflutter1/screens/TestStack.dart';
+import 'package:testflutter1/screens/FormScreen.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -14,7 +15,8 @@ void main() {
         '/second': (context) => const SecondPage(),
         '/third': (context) => const ThirdPage(),
         '/datos': (context) => const Datos(),
-        '/Four': (context) => const TestStack()
+        '/Four': (context) => const TestStack(),
+        '/five': (context) => const FormScreen()
       }
       //home: HomePage(),
       ));
@@ -28,11 +30,11 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: const Icon(Icons.menu),
-        backgroundColor: Color.fromARGB(255, 133, 35, 40),
+        backgroundColor: Color.fromARGB(255, 219, 21, 21),
         centerTitle: true,
         title: const Text('Pagina inicial'),
         elevation: 20.0,
-        shadowColor: Color.fromARGB(255, 73, 2, 2),
+        shadowColor: Color.fromARGB(255, 192, 167, 167),
         shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(bottom: Radius.circular(15))),
         actions: <Widget>[
@@ -49,13 +51,13 @@ class HomePage extends StatelessWidget {
             ElevatedButton(
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
-                        Color.fromARGB(255, 145, 52, 52)),
+                        Color.fromARGB(255, 170, 128, 128)),
                     padding: MaterialStateProperty.all(
                         const EdgeInsets.symmetric(
                             horizontal: 25, vertical: 15)),
                     textStyle: MaterialStateProperty.all(
                         const TextStyle(fontSize: 15))),
-                child: const Text('Segunda pantalla'),
+                child: const Text('Segunda Pantalla'),
                 onPressed: () {
                   final route = MaterialPageRoute(
                     builder: (context) => const SecondPage(),
@@ -66,13 +68,13 @@ class HomePage extends StatelessWidget {
             ElevatedButton(
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
-                        Color.fromARGB(255, 145, 52, 52)),
+                        Color.fromARGB(255, 170, 128, 128)),
                     padding: MaterialStateProperty.all(
                         const EdgeInsets.symmetric(
                             horizontal: 25, vertical: 15)),
                     textStyle: MaterialStateProperty.all(
                         const TextStyle(fontSize: 15))),
-                child: const Text('Tercera pantalla'),
+                child: const Text('Tercera Pantalla'),
                 onPressed: () {
                   final route = MaterialPageRoute(
                     builder: (context) => const ThirdPage(),
@@ -83,13 +85,13 @@ class HomePage extends StatelessWidget {
             ElevatedButton(
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
-                        Color.fromARGB(255, 145, 52, 52)),
+                        Color.fromARGB(255, 170, 128, 128)),
                     padding: MaterialStateProperty.all(
                         const EdgeInsets.symmetric(
                             horizontal: 25, vertical: 15)),
                     textStyle: MaterialStateProperty.all(
                         const TextStyle(fontSize: 15))),
-                child: const Text('Cuarta pantalla'),
+                child: const Text('Pantalla Datos'),
                 onPressed: () {
                   final route = MaterialPageRoute(
                     builder: (context) => const TestStack(),
@@ -100,7 +102,7 @@ class HomePage extends StatelessWidget {
             ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
-                      Color.fromARGB(255, 145, 52, 52)),
+                      Color.fromARGB(255, 170, 128, 128)),
                   padding: MaterialStateProperty.all(
                       const EdgeInsets.symmetric(horizontal: 25, vertical: 15)),
                 ),
@@ -110,6 +112,21 @@ class HomePage extends StatelessWidget {
                     builder: (context) => const Datos(),
                   );
                   Navigator.pushNamed(context, '/datos');
+                }),
+            const SizedBox(height: 10.0),
+            ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(
+                      Color.fromARGB(255, 170, 128, 128)),
+                  padding: MaterialStateProperty.all(
+                      const EdgeInsets.symmetric(horizontal: 25, vertical: 15)),
+                ),
+                child: const Text('Datos Contar'),
+                onPressed: () {
+                  final route = MaterialPageRoute(
+                    builder: (context) => const Datos(),
+                  );
+                  Navigator.pushNamed(context, '/five');
                 })
           ],
         ),

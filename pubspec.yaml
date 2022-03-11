@@ -62,6 +62,9 @@ flutter:
     - assets/img/halo.jpg
     - assets/img/VD.jpg
     - assets/img/oso.jpg
+    - assets/img/burguer.jpg
+    - assets/img/jocho.jpg
+    - assets/img/yo.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

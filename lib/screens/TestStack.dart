@@ -8,7 +8,7 @@ class TestStack extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Página"),
-        backgroundColor: Color.fromARGB(255, 7, 117, 207),
+        backgroundColor: Color.fromARGB(255, 134, 143, 150),
       ),
       //body: stackSinPos()
       body: Center(
@@ -40,9 +40,9 @@ class TestStack extends StatelessWidget {
                       width: 180.0,
                       height: 20.0,
                       //color: Colors.black,
-                      child: const Text('Victor David Gordillo Resendiz',
-                          style:
-                              TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
+                      child: const Text('Gordillo Resendiz Victor David ',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 255, 255, 255))),
                     )),
 
                 //BOTON
